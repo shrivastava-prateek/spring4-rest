@@ -1,0 +1,81 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.163.1/containers/java-8
+{
+	"name": "Java 8",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": {
+			"INSTALL_MAVEN": "true",
+			"INSTALL_GRADLE": "false",
+			"INSTALL_NODE": "false",
+			"NODE_VERSION": "lts/*"
+		}
+	},
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": { 
+		"terminal.integrated.shell.linux": "/bin/bash",
+		"java.home": "/docker-java-home",
+		"java.import.gradle.java.home": "/usr/local/sdkman/candidates/java/current",
+		"java.configuration.runtimes": [{
+			"default": true,
+			"name": "JavaSE-1.8",
+			"path": "/usr/local/sdkman/candidates/java/current"
+		}]
+	},
+	
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+
+"adashen.vscode-tomcat",
+"alphabotsec.vscode-eclipse-keybindings",
+"christian-kohler.path-intellisense",
+"CoenraadS.bracket-pair-colorizer",
+"dbaeumer.vscode-eslint",
+"DotJoshJohnson.xml",
+"ecmel.vscode-html-css",
+"esbenp.prettier-vscode",
+"formulahendry.auto-close-tag",
+"formulahendry.auto-rename-tag",
+"formulahendry.code-runner",
+"johnstoncode.svn-scm",
+"ms-azuretools.vscode-docker",
+"ms-vscode-remote.remote-containers",
+"ms-vscode-remote.remote-ssh",
+"ms-vscode-remote.remote-ssh-edit",
+"ms-vscode-remote.remote-wsl",
+"ms-vscode.atom-keybindings",
+"msjsdiag.debugger-for-chrome",
+"naumovs.color-highlight",
+"Pivotal.vscode-boot-dev-pack",
+"Pivotal.vscode-spring-boot",
+"PKief.material-icon-theme",
+"redhat.java",
+"redhat.vscode-yaml",
+"ritwickdey.LiveServer",
+"ryu1kn.partial-diff",
+"shengchen.vscode-checkstyle",
+"sodatea.velocity",
+"VisualStudioExptTeam.vscodeintellicode",
+"vscjava.vscode-java-debug",
+"vscjava.vscode-java-dependency",
+"vscjava.vscode-java-pack",
+"vscjava.vscode-java-test",
+"vscjava.vscode-maven",
+"vscjava.vscode-spring-boot-dashboard",
+"vscjava.vscode-spring-initializr",
+"wwm.better-align",
+"yo1dog.cursor-align",
+"zhuangtongfa.material-theme",
+"Zignd.html-css-class-completion"
+],
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "java -version",
+
+	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode"
+}
